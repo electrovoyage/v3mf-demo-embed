@@ -4,15 +4,15 @@ function doModel() {
 
     const parent = document.querySelector('.embedhere')
     const embedurl = new URL('https://viewstl.com');
-    url.searchParams.append('embedded', null);
-    url.searchParams.append('local', null);
-    url.searchParams.append('url', modelurl);
-    url.searchParams.append('bgcolor', 'transparent');
-    url.searchParams.append('noborder', 'yes');
-    url.searchParams.append('edges', 'yes');
+    embedurl.searchParams.append('embedded', null);
+    embedurl.searchParams.append('local', null);
+    embedurl.searchParams.append('url', modelurl);
+    embedurl.searchParams.append('bgcolor', 'transparent');
+    embedurl.searchParams.append('noborder', 'yes');
+    embedurl.searchParams.append('edges', 'yes');
 
     iframe = document.createElement('iframe');
-    iframe.src = url.toString();
+    iframe.src = embedurl.toString();
     iframe.style = "border:0;margin:0;width:100%;height:100%;";
     iframe.id = "vs_iframe";
         
