@@ -5,11 +5,13 @@ function doModel() {
     const parent = document.querySelector('.embedhere')
     const embedurl = new URL('https://viewstl.com');
     embedurl.searchParams.append('embedded', null);
-    embedurl.searchParams.append('local', null);
+    //embedurl.searchParams.append('local', null);
     embedurl.searchParams.append('url', modelurl);
     embedurl.searchParams.append('bgcolor', 'transparent');
     embedurl.searchParams.append('noborder', 'yes');
     embedurl.searchParams.append('edges', 'yes');
+
+    console.log(modelurl)
 
     iframe = document.createElement('iframe');
     iframe.src = embedurl.toString();
